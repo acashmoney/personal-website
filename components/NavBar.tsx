@@ -1,13 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-// const navLinks = [
-//     { text: 'Home', href: '/' },
-//     { text: 'About', href: '/about' },
-//     { text: 'Chess', href: '/chess' },
-//     { text: 'Blog', href: '/blog' },
-// ]
-
 export default function NavBar() {
     const [active, setActive] = useState(false);
 
@@ -17,9 +10,9 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav className="grid grid-cols-2 bg-[#121212] p-6 text-stone-200">
+            <nav className="grid grid-cols-2 bg-[#121212] p-10 text-stone-200">
                 <Link href='/' className='text-2xl font-bold'>
-                    <p className='hover:text-rose-500'>
+                    <p className='transition duration-500 hover:text-sky-600'>
                         Aakaash
                             <sup className='font-features sups text-lg font-light'>
                                 .xyz
@@ -27,18 +20,18 @@ export default function NavBar() {
                     </p>
                 </Link>
                 <div id='sub-pages' className='grid grid-cols-3 font-medium'>
-                    <Link href='/about' className='flex justify-end'>
-                        <p className='hover:text-amber-300'>
+                    <Link href='https://labdao.xyz' className='flex justify-end'>
+                        <p>
                             LabDAO
                         </p>
                     </Link>
                     <Link href='' className='flex justify-end'>
-                        <p className='hover:text-green-500'>
+                        <p>
                             Writing
                         </p>
                     </Link>
-                    <Link href='' className='flex justify-end'>
-                        <p className='hover:text-blue-600'>
+                    <Link href='/chess' className='flex justify-end'>
+                        <p>
                             Chess
                         </p>
                     </Link>
