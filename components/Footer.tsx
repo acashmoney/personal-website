@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Footer() {
+const Footer = () => {
     return (
         <>
             <footer className='p-10 bg-[#121212] block'>
@@ -27,3 +27,5 @@ export default function Footer() {
         </>
     )
 }
+
+export default Footer;

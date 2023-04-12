@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/core": "^11.0.0",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@next/font": "^13.0.5",
@@ -19,11 +20,17 @@
     "eslint-config-next": "13.0.5",
     "framer-motion": "^7.6.15",
     "next": "13.0.5",
+    "noisejs": "^2.1.0",
+    "p5": "^1.6.0",
+    "perlin.js": "^1.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "simplex-noise": "^4.0.1",
     "typescript": "4.9.3"
   },
   "devDependencies": {
+    "@types/noisejs": "^0.0.28",
+    "@types/p5": "^1.6.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4"

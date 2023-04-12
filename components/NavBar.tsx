@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function NavBar() {
+const NavBar = () => {
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
@@ -10,33 +10,35 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav className="grid grid-cols-2 bg-[#121212] p-10 text-stone-200">
+            <nav className="grid grid-cols-2 bg-[#121212] p-10 text-stone-200 navbar-transition">
                 <Link href='/' className='text-2xl font-bold'>
-                    <p className='transition duration-500 hover:text-sky-600'>
+                    <h1 className='transition duration-500 hover:text-sky-600'>
                         Aakaash
-                            <sup className='font-features sups text-lg font-light'>
-                                .xyz
-                            </sup>
-                    </p>
+                        <sup className='font-features sups text-lg font-light'>
+                            .xyz
+                        </sup>
+                    </h1>
                 </Link>
                 <div id='sub-pages' className='grid grid-cols-3 font-medium'>
                     <Link href='https://labdao.xyz' className='flex justify-end'>
-                        <p>
+                        <h2>
                             LabDAO
-                        </p>
+                        </h2>
                     </Link>
                     <Link href='' className='flex justify-end'>
-                        <p>
+                        <h2>
                             Writing
-                        </p>
+                        </h2>
                     </Link>
                     <Link href='/chess' className='flex justify-end'>
-                        <p>
+                        <h2>
                             Chess
-                        </p>
+                        </h2>
                     </Link>
                 </div>
             </nav>
         </div>
     )
 }
+
+export default NavBar;
