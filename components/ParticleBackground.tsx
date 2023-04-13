@@ -7,12 +7,19 @@ interface ParticleBackgroundProps {
   className?: string;
   navBarHeight: number;
   footerHeight: number;
+  onHueChange?: (minMaxHue: [number, number]) => void;
 }
 
-const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className, navBarHeight, footerHeight }) => {
+const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ 
+	className, 
+	navBarHeight, 
+	footerHeight,
+	onHueChange,
+}) => {
   const canvasRef = useRef<HTMLDivElement>(null);
   const goldenRatio = 1.61803398875;
   const { width, height } = useWindowSize();
+  const [minMaxHue, setMinMaxHue] = useState<[number, number] | null>(null);
 
   useEffect(() => {
     let p5Instance: p5;
@@ -86,6 +93,16 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className, navB
         const brightness = p.random(40, 100);
         colors.push(p.color(hue, saturation, brightness));
       }
+
+	  const hues = colors.map((color) => p.hue(color));
+	  const minHue = Math.min(...hues);
+	  const maxHue = Math.max(...hues);
+
+	  setMinMaxHue([minHue, maxHue]);
+
+	  if (typeof onHueChange === 'function') {
+		onHueChange([minHue, maxHue])
+	  }
     };
 
     const generateParticles = (p: p5) => {
@@ -165,7 +182,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className, navB
 			<div
 				ref={canvasRef} 
 				className={className}
-				style={{ width: width, height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)` }}
+				style={{ width: width, height: `calc(100% - ${navBarHeight}px - ${footerHeight}px)` }}
 			/>
 		</div>
     </>
