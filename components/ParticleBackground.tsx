@@ -106,7 +106,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     };
 
     const generateParticles = (p: p5) => {
-      const numParticles = p.random(4000, 10000);
+      const numParticles = p.random(1000, 5000);
 
       for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle(p));
