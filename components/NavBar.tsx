@@ -2,30 +2,30 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import LabDAOLogo from './LabDAOLogo';
 
-interface NavBarProps {
-  minMaxHue: {
-    min?: number;
-    max?: number;
-  };
-}
+// interface NavBarProps {
+//   minMaxHue: {
+//     min?: number;
+//     max?: number;
+//   };
+// }
 
-const NavBar: React.FC<NavBarProps> = ({ minMaxHue }) => {
+const NavBar = () => {
   const [gradientStyle, setGradientStyle] = useState({});
   const [hover, setHover] = useState(false);
 
-  useEffect(() => {
-    if (minMaxHue.min !== undefined && minMaxHue.max !== undefined && hover) {
-      const gradient = `linear-gradient(to right, hsl(${minMaxHue.min}, 100%, 50%), hsl(${minMaxHue.max}, 100%, 50%))`;
-      setGradientStyle({
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundImage: gradient,
-      });
-    } else {
-      setGradientStyle({});
-    }
-  }, [minMaxHue, hover]);
+//   useEffect(() => {
+//     if (minMaxHue.min !== undefined && minMaxHue.max !== undefined && hover) {
+//       const gradient = `linear-gradient(to right, hsl(${minMaxHue.min}, 100%, 50%), hsl(${minMaxHue.max}, 100%, 50%))`;
+//       setGradientStyle({
+//         backgroundClip: 'text',
+//         WebkitBackgroundClip: 'text',
+//         WebkitTextFillColor: 'transparent',
+//         backgroundImage: gradient,
+//       });
+//     } else {
+//       setGradientStyle({});
+//     }
+//   }, [minMaxHue, hover]);
 
   return (
     <div>
