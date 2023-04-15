@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
 				<main className="absolute top-0 pb-10 flex-grow" style={{ marginTop: '40px', marginLeft: '40px'}}>
-					<div className="flex text-3xl md:text-6xl font-medium text-stone-200">
+					<div className="flex text-4xl md:text-6xl font-medium text-stone-200">
 						If I told you that
 						<br/>
 						a flower bloomed 
