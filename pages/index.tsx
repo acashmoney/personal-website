@@ -12,7 +12,7 @@ const Home: React.FC = () => {
 			<Head>
 				<title>Aakaash</title>
 				<meta name="description" content="am i dreaming...?" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/aakaash_xyz_favicon_64x64.png" />
 			</Head>
 			<div className="relative min-h-screen flex flex-col">
 				<div className="bg-[#121212]">
