@@ -39,9 +39,9 @@ const Home: React.FC = () => {
             </div>
           </main>
         </div>
-        <div className="bg-[#121212]">
+        {/* <div className="bg-[#121212]">
           <Footer />
-        </div>
+        </div> */}
       </div>
     </>
   );

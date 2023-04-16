@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-const LabDAOLogo = () => {
+interface LabDAOLogoProps {
+  className?: string;
+}
+
+const LabDAOLogo: React.FC<LabDAOLogoProps> = ({ className }) => {
   const [hovered, setHovered] = useState(false);
 
   const fillColor = hovered ? '#6bdaad' : '#B7C0C7';
@@ -9,7 +13,7 @@ const LabDAOLogo = () => {
     <svg
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="transition-fill duration-500"
+      className={`transition-fill duration-500 ${className}`}
       style={{ fill: fillColor }}
       width="30"
       height="30"

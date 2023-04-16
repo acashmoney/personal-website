@@ -180,7 +180,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
         className={className}
         style={{
           width: width,
-          height: `calc(${height}px - ${navBarHeight}px - ${footerHeight}px)`,
+          height: `calc(${height}px - ${navBarHeight}px)`,
           zIndex: -1,
         }}
       />
