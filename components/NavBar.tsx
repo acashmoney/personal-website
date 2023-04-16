@@ -36,12 +36,12 @@ const NavBar: React.FC<NavBarProps> = ({ minMaxHue }) => {
           onMouseLeave={() => setHover(false)}
         >
           <h1 className="transition duration-500" style={gradientStyle}>
-            <a href="/">
+            <Link href="/">
               Aakaash
               <sup className="font-features sups text-lg font-light">
                 .xyz
               </sup>
-            </a>
+            </Link>
           </h1>
         </div>
         <div className="flex justify-between items-center space-x-4">
