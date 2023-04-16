@@ -9,6 +9,11 @@ const Home: React.FC = () => {
 
 	return (
 		<>
+			<Head>
+				<title>Aakaash</title>
+				<meta name="description" content="am i dreaming...?" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<div className="bg-[#121212]">
 				<NavBar minMaxHue={minMaxHue}/>
 			</div>
@@ -18,25 +23,6 @@ const Home: React.FC = () => {
 					navBarHeight={40}
 					footerHeight={40}
 				/>
-				<Head>
-					<title>Aakaash</title>
-					<meta name="description" content="am i dreaming...?" />
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-				<main className="absolute top-0 pb-10 flex-grow" style={{ marginTop: '40px', marginLeft: '40px'}}>
-					<div className="flex text-4xl md:text-6xl font-medium text-stone-200">
-						If I told you that
-						<br/>
-						a flower bloomed 
-						<br/>
-						in a dark room,
-						<br />
-						would you trust it?
-						<br />
-						<br />
-						-Kendrick Lamar
-					</div>
-				</main>
 				<div className="bg-[#121212]">
 					<Footer />
 				</div>

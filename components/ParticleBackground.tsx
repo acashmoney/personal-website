@@ -175,16 +175,33 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
 
   return (
     <>
-		<div
-			className="relative"
-			style={{ height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)` }}
-		>
-			<div
-				ref={canvasRef} 
-				className={className}
-				style={{ width: width, height: `calc(100% - ${navBarHeight}px - ${footerHeight}px)` }}
-			/>
-		</div>
+      <div
+        className="relative"
+        style={{ height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)` }}
+      >
+        <div
+          ref={canvasRef}
+          className={className}
+          style={{ width: width, height: `calc(100% - ${navBarHeight}px - ${footerHeight}px)` }}
+        />
+        <main
+          className="absolute top-0 pb-10 flex-grow"
+          style={{ marginTop: "40px", marginLeft: "40px" }}
+        >
+          <div className="flex text-4xl md:text-6xl font-medium text-stone-200">
+            If I told you that
+            <br />
+            a flower bloomed
+            <br />
+            in a dark room,
+            <br />
+            would you trust it?
+            <br />
+            <br />
+            -Kendrick Lamar
+          </div>
+        </main>
+      </div>
     </>
   );
 };
