@@ -177,12 +177,14 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     <>
       <div
         className="relative"
-        style={{ height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)` }}
       >
         <div
           ref={canvasRef}
           className={className}
-          style={{ width: width, height: `calc(100% - ${navBarHeight}px - ${footerHeight}px)` }}
+          style={{
+            width: width,
+            height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)`,
+          }}
         />
         <main
           className="absolute top-0 pb-10 flex-grow"

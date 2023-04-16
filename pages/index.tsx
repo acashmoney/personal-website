@@ -14,15 +14,17 @@ const Home: React.FC = () => {
 				<meta name="description" content="am i dreaming...?" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="bg-[#121212]">
-				<NavBar minMaxHue={minMaxHue}/>
-			</div>
 			<div className="relative min-h-screen flex flex-col">
-				<ParticleBackground
-					className="absolute top-0 left-0 z-[-1] w-full h-full"
-					navBarHeight={40}
-					footerHeight={40}
-				/>
+				<div className="bg-[#121212]">
+					<NavBar minMaxHue={minMaxHue}/>
+				</div>
+				<div className="relative min-h-screen flex flex-col">
+					<ParticleBackground
+						className="absolute top-0 left-0 z-[-1] w-full h-full"
+						navBarHeight={40}
+						footerHeight={40}
+					/>
+				</div>
 				<div className="bg-[#121212]">
 					<Footer />
 				</div>
