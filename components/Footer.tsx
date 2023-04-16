@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Footer = () => {
     return (
         <>
-            <footer className='p-10 bg-[#121212] block z-10'>
+            <footer className='p-10 bg-[#121212] block'>
                 <div id='footer' className='grid grid-cols-2 justify-between'>
                     <div id='footer-tagline' className='flex'>
                         <a href=''>

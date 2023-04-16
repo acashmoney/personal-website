@@ -5,12 +5,16 @@ import useWindowSize from '../hooks/useWindowSize';
 
 interface ParticleBackgroundProps {
   className?: string;
-  children: React.ReactNode;
+  navBarHeight: number;
+  footerHeight: number;
+  onHueChange?: (minMaxHue: [number, number]) => void;
 }
 
 const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ 
 	className, 
-	children,
+	navBarHeight, 
+	footerHeight,
+	onHueChange,
 }) => {
   const canvasRef = useRef<HTMLDivElement>(null);
   const goldenRatio = 1.61803398875;
@@ -94,11 +98,11 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
 	  const minHue = Math.min(...hues);
 	  const maxHue = Math.max(...hues);
 
-	//   setMinMaxHue([minHue, maxHue]);
+	  setMinMaxHue([minHue, maxHue]);
 
-	//   if (typeof onHueChange === 'function') {
-	// 	onHueChange([minHue, maxHue])
-	//   }
+	  if (typeof onHueChange === 'function') {
+		onHueChange([minHue, maxHue])
+	  }
     };
 
     const generateParticles = (p: p5) => {
@@ -171,14 +175,16 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
 
   return (
     <>
-      <div className="relative h-70">
-        <div
-          ref={canvasRef}
-          className={className}
-          style={{ width: width, height: height }}
-        />
-        <div className="absolute top-0 left-0 w-full h-70">{children}</div>
-      </div>
+		<div
+			className="relative"
+			style={{ height: `calc(100vh - ${navBarHeight}px - ${footerHeight}px)` }}
+		>
+			<div
+				ref={canvasRef} 
+				className={className}
+				style={{ width: width, height: `calc(100% - ${navBarHeight}px - ${footerHeight}px)` }}
+			/>
+		</div>
     </>
   );
 };
