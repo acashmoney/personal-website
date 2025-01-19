@@ -4,7 +4,7 @@ import { CRTTerminal } from '../components/CRTTerminal';
 const Home = () => {
   return (
     <CRTTerminal
-      text="under construction..."
+      text="initializing..."
       typingSpeed={100}
       minFlickerDelay={500}
       maxFlickerDelay={2000}
