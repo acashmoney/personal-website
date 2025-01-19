@@ -25,6 +25,15 @@ module.exports = {
         'labdao': theme('backgroundColor.labdao'),
         'stone-200': theme('backgroundColor.stone-200'),
       }),
+      animation: {
+        'subtle-pulse': 'subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        'subtle-pulse': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+      },
     },
   },
   variants: {

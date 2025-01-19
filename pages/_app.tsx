@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import '../styles/custom-svg.css'
 import type { AppProps } from 'next/app';
 import { motion } from 'framer-motion';
 import { Inter } from '@next/font/google';
@@ -22,7 +21,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           },
         }}
       >
-        <main className={`${inter.className} bg-transparent min-h-screen flex flex-col`}>
+        <main className={`${inter.className} min-h-screen flex flex-col`}>
           <Component {...pageProps} />
         </main>
       </motion.div>

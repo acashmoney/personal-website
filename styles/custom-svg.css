@@ -1,7 +1,0 @@
-.custom-svg svg {
-    @apply fill-[var(--color-stone-200)] transition-fill duration-500;
-}
-
-.group:hover .custom-svg svg {
-    @apply fill-[var(--color-labdao)];
-}
