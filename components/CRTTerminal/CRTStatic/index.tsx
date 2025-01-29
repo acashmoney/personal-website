@@ -21,7 +21,7 @@ export const CRTStatic: React.FC<CRTStaticProps> = ({ opacity = 0.85 }) => {
                 <filter id="noise">
                     <feTurbulence
                         type="fractalNoise"
-                        baseFrequency="1.0"   // Higher frequency = finer grain static
+                        baseFrequency="0.8"   // Higher frequency = finer grain static
                         numOctaves="3"        // More octaves for that TV static look
                         stitchTiles="stitch"
                         seed={seed}
