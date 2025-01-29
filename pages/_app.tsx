@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" type="image/svg+xml" href="/A.svg" />
       </Head>
-      <main className="min-h-screen flex flex-col">
+      <main className="min-h-screen flex flex-col overflow-auto">
         <Component {...pageProps} />
       </main>
     </>
