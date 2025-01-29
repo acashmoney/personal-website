@@ -59,18 +59,30 @@ const Chess = () => {
             size="2xl"
           />
         </div>
-        <FlickerText 
-          text="marshall amateur champion (2022)"
-          minFlickerDelay={3200}
-          maxFlickerDelay={5000}
-          size="lg"
-        />
-        <FlickerText 
-          text="1st place tie: pan-american intercollegiate championship (2012)"
-          minFlickerDelay={3200}
-          maxFlickerDelay={5000}
-          size="lg"
-        />        
+        <a
+          href="https://www.uschess.org/msa/XtblMain.php?202212044882"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FlickerText 
+            text="marshall amateur champion (2022)"
+            minFlickerDelay={3200}
+            maxFlickerDelay={5000}
+            size="lg"
+          />
+        </a>
+        <a
+          href="https://news.illinois.edu/four-kings-of-illini-chess-club-make-move-on-elite-stage/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FlickerText 
+            text="1st place tie: pan-american intercollegiate championship (2012)"
+            minFlickerDelay={3200}
+            maxFlickerDelay={5000}
+            size="lg"
+          />        
+        </a>
       </div>
     </div>
   );
