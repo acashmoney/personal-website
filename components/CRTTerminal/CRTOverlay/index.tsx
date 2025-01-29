@@ -12,7 +12,7 @@ export const CRTOverlay: React.FC<CRTOverlayProps & { children: React.ReactNode 
     <>
         {children}
         <div
-            className="absolute inset-0"
+            className="absolute inset-0 pointer-events-none"
             style={crtStyles.container(scanLineSize, rgbOffset)}
         />
         <CRTStatic opacity={staticOpacity} />

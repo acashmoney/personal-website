@@ -5,6 +5,8 @@ import { TypewriterText } from '../TypewriterText';
 import { StaticText } from '../StaticText'
 import { crtStyles } from '../../styles/styles';
 import { CRTStatic } from './CRTStatic';
+import { FaGithub, FaXTwitter } from 'react-icons/fa6'
+import { SiLichess } from 'react-icons/si'
 
 export const CRTTerminal: React.FC<CRTTerminalProps> = ({
     text,
@@ -19,12 +21,32 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
         <div className="relative w-full h-screen bg-black overflow-hidden">
             <CRTOverlay>
                 <div className="absolute inset-0" style={crtStyles.container(scanLineSize, rgbOffset)}>
-                    {/* Upper left corner text - adjusted padding for mobile */}
-                    <div className="absolute top-4 left-4 md:top-8 md:left-8">
-                        <StaticText text="Aakaash.xyz" />
+                    {/* Top bar with logo and social links */}
+                    <div className="absolute top-4 w-full px-4 md:top-8 md:px-8 flex justify-between items-center z-10">
+                        <div>
+                            <StaticText text="Aakaash.xyz" />
+                        </div>
+                        <div className="flex gap-10">
+                            <a 
+                                href="https://github.com/acashmoney" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="cursor-pointer hover:opacity-80"
+                            >
+                                <FaGithub className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                            </a>
+                            <a 
+                                href="https://x.com/AakaashMeduri" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="cursor-pointer hover:opacity-80"
+                            >
+                                <FaXTwitter className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                            </a>
+                            <SiLichess className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                        </div>
                     </div>
                     
-                    {/* Centered content - added padding for mobile */}
                     <div className="flex flex-col items-center justify-center h-full px-4 md:px-0">
                         <TypewriterText 
                             text={text}
