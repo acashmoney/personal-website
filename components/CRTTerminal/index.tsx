@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import type { CRTTerminalProps } from './types';
 import { CRTOverlay } from './CRTOverlay';
@@ -43,17 +44,24 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                             >
                                 <FaXTwitter className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
                             </a>
-                            <SiLichess className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                            <Link 
+                                href="/chess"
+                                className="cursor-pointer hover:opacity-80"
+                            >
+                                <SiLichess className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                            </Link>
                         </div>
                     </div>
                     
                     <div className="flex flex-col items-center justify-center h-full px-4 md:px-0">
-                        <TypewriterText 
-                            text={text}
-                            typingSpeed={typingSpeed}
-                            minFlickerDelay={minFlickerDelay}
-                            maxFlickerDelay={maxFlickerDelay}
-                        />
+                        {text && (
+                            <TypewriterText 
+                                text={text}
+                                typingSpeed={typingSpeed}
+                                minFlickerDelay={minFlickerDelay}
+                                maxFlickerDelay={maxFlickerDelay}
+                            />
+                        )}
                     </div>
                 </div>
                 <CRTStatic opacity={staticOpacity} />
