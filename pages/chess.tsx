@@ -4,7 +4,7 @@ import { FlickerText } from '../components/FlickerText';
 
 const Chess = () => {
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen w-full bg-black overflow-y-auto">
       <CRTTerminal
         text=""
         typingSpeed={100}
@@ -19,7 +19,7 @@ const Chess = () => {
           text="uscf national master + marshall chess club member"
           minFlickerDelay={3000}
           maxFlickerDelay={10000}
-          size="3xl"
+          size="2xl"
         />
         <FlickerText 
           text="online wins"
@@ -36,7 +36,7 @@ const Chess = () => {
             text="hikaru nakamura (blitz world #1)"
             minFlickerDelay={3200}
             maxFlickerDelay={5000}
-            size="lg"
+            size="sm"
           />
         </a>
         <a
@@ -48,7 +48,7 @@ const Chess = () => {
             text="shakhriyar mamedyarov (classical world #5) - chess960"
             minFlickerDelay={3200}
             maxFlickerDelay={5000}
-            size="lg"
+            size="sm"
           />
         </a>
         <div className="mt-4">
@@ -68,7 +68,7 @@ const Chess = () => {
             text="marshall amateur champion (2022)"
             minFlickerDelay={3200}
             maxFlickerDelay={5000}
-            size="lg"
+            size="sm"
           />
         </a>
         <a
@@ -80,7 +80,7 @@ const Chess = () => {
             text="1st place tie: pan-american intercollegiate championship (2012)"
             minFlickerDelay={3200}
             maxFlickerDelay={5000}
-            size="lg"
+            size="sm"
           />        
         </a>
       </div>
