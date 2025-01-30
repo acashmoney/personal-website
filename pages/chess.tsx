@@ -16,7 +16,7 @@ const Chess = () => {
       />
       <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-6">
         <FlickerText 
-          text="uscf national master + marshall chess club member"
+          text="national master + marshall chess club member"
           minFlickerDelay={3000}
           maxFlickerDelay={10000}
           size="2xl"
@@ -65,7 +65,7 @@ const Chess = () => {
           rel="noopener noreferrer"
         >
           <FlickerText 
-            text="marshall amateur champion (2022)"
+            text="marshall chess club amateur champion (2022)"
             minFlickerDelay={3200}
             maxFlickerDelay={5000}
             size="sm"
