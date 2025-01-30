@@ -34,7 +34,7 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                                 rel="noopener noreferrer"
                                 className="cursor-pointer hover:opacity-80"
                             >
-                                <FaGithub className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                                <FaGithub className="text-3xl text-[#00FF41] cursor-pointer transition-all duration-300 hover:text-[#7FFF00] filter drop-shadow-[0_0_10px_rgba(0,255,65,0.8)]" />
                             </a>
                             <a 
                                 href="https://x.com/AakaashMeduri" 
@@ -42,13 +42,13 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                                 rel="noopener noreferrer"
                                 className="cursor-pointer hover:opacity-80"
                             >
-                                <FaXTwitter className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                                <FaXTwitter className="text-3xl text-[#00FF41] cursor-pointer transition-all duration-300 hover:text-[#7FFF00] filter drop-shadow-[0_0_10px_rgba(0,255,65,0.8)]" />
                             </a>
                             <Link 
                                 href="/chess"
                                 className="cursor-pointer hover:opacity-80"
                             >
-                                <SiLichess className="text-3xl text-[#00FF41] cursor-pointer transition-colors duration-300 hover:text-[#7FFF00]" />
+                                <SiLichess className="text-3xl text-[#00FF41] cursor-pointer transition-all duration-300 hover:text-[#7FFF00] filter drop-shadow-[0_0_10px_rgba(0,255,65,0.8)]" />
                             </Link>
                         </div>
                     </div>
