@@ -25,7 +25,9 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                     {/* Top bar with logo and social links */}
                     <div className="absolute top-4 w-full px-4 md:top-8 md:px-8 flex justify-between items-center z-10">
                         <div>
-                            <StaticText text="Aakaash.xyz" />
+                            <Link href="/" className="cursor-pointer hover:opacity-80">
+                                <StaticText text="Aakaash.xyz" />
+                            </Link>
                         </div>
                         <div className="flex gap-10">
                             <a 
