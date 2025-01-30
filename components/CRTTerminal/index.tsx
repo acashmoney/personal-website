@@ -26,7 +26,10 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                     <div className="absolute top-4 w-full px-4 md:top-8 md:px-8 flex justify-between items-center z-10">
                         <div>
                             <Link href="/" className="cursor-pointer hover:opacity-80">
-                                <StaticText text="Aakaash.xyz" />
+                                <div className="flex flex-col">
+                                    <StaticText text="Aakaash.xyz" size="2xl" />
+                                    <StaticText text="optimist, engineer" size="sm" />
+                                </div>
                             </Link>
                         </div>
                         <div className="flex gap-10">
