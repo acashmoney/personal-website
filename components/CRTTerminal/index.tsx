@@ -16,7 +16,8 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
     maxFlickerDelay,
     scanLineSize,
     staticOpacity,
-    rgbOffset
+    rgbOffset,
+    showCursor
 }) => {
     return (
         <div className="relative w-full h-screen bg-black overflow-hidden">
@@ -65,6 +66,7 @@ export const CRTTerminal: React.FC<CRTTerminalProps> = ({
                                 typingSpeed={typingSpeed}
                                 minFlickerDelay={minFlickerDelay}
                                 maxFlickerDelay={maxFlickerDelay}
+                                showCursor={showCursor}
                             />
                         )}
                     </div>

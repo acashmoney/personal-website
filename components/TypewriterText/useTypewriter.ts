@@ -1,28 +1,42 @@
 import { useState, useEffect } from 'react';
 
-export const useTypewriter = (text: string, typingSpeed: number) => {
+interface TypewriterOptions {
+    text: string;
+    typingSpeed: number;
+    shouldReset?: boolean;
+    resetDelay?: number;
+}
+
+export const useTypewriter = ({ 
+    text, 
+    typingSpeed, 
+    shouldReset = false,
+    resetDelay = 7000 
+}: TypewriterOptions) => {
     const [displayText, setDisplayText] = useState("");
     const [typingIndex, setTypingIndex] = useState(0);
-    const isComplete = typingIndex === text.length;
+    const [hasCompleted, setHasCompleted] = useState(false);
+    const isTypingComplete = typingIndex === text.length;
 
     useEffect(() => {
-        if (!isComplete) {
+        if (!isTypingComplete) {
             const typingTimer = setTimeout(() => {
                 setDisplayText(prevText => prevText + text[typingIndex]);
                 setTypingIndex(prevIndex => prevIndex + 1);
             }, typingSpeed);
 
             return () => clearTimeout(typingTimer);
-        } else {
-            // After typing is complete, wait 3 seconds and reset
+        } else if (shouldReset && !hasCompleted) {
+            setHasCompleted(true);
             const resetTimer = setTimeout(() => {
                 setDisplayText("");
                 setTypingIndex(0);
-            }, 7000); // 3 seconds delay before reset
+                setHasCompleted(false);
+            }, resetDelay);
 
             return () => clearTimeout(resetTimer);
         }
-    }, [typingIndex, text, typingSpeed, isComplete]);
+    }, [typingIndex, text, typingSpeed, isTypingComplete, shouldReset, resetDelay, hasCompleted]);
 
-    return { displayText, isComplete };
+    return { displayText, isComplete: isTypingComplete };
 };
